@@ -3,6 +3,7 @@ import styles from "./Detail.module.css";
 import { getActivities, getCountryById } from "../../redux/actions";
 import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
+import Loading from "../../components/Loading/Loading";
 
 const Detail = () => {
   const { id } = useParams();
@@ -16,7 +17,7 @@ const Detail = () => {
   return (
     <div className={styles.container}>
       {!country ? (
-        <h2>Loading...</h2>
+        <Loading />
       ) : (
         <div>
           <div className={styles.container_country}>

@@ -1,6 +1,7 @@
 const validations = (newActivity) => {
     const errors = {};
-    const regexName = /[a-zñüáéíóúøäåöß ,."'-]+/gi;
+    // i => no matter upper case or minus
+    const regexName = /[a-zñüáéíóúøäåöß ,."'-]+/gi; 
 
 
 

@@ -10,29 +10,26 @@ import {
 } from "../../redux/actions";
 
 const Filter = ({ setCurrentPage }) => {
-  // Obtener el dispatch para poder enviar las acciones a Redux
+  // Catching disptach to sending by redux
   const dispatch = useDispatch();
   const allActivities = useSelector((state) => state.allActivities);
 
-  // Manejar el cambio del filtro por continente
+
   const handleContinentChange = (event) => {
     const selectContinent = event.target.value;
     dispatch(filteredContinent(selectContinent));
     setCurrentPage(1);
   };
 
-  // Manejar el cambio del filtro por actividad
   const handleActivityChange = (event) => {
     dispatch(filteredActivity(event.target.value));
     setCurrentPage(1);
   };
 
-  // Manejar el cambio del orden alfabético
   const handleAlphabeticOrderChange = (event) => {
     dispatch(alphabeticOrder(event.target.value));
   };
 
-  // Manejar el cambio del orden por población
   const handlePopulationOrderChange = (event) => {
     dispatch(poblationOrder(event.target.value));
   };
@@ -43,7 +40,7 @@ const Filter = ({ setCurrentPage }) => {
 
   return (
     <div className={styles.container}>
-      {/* Filtro por continente */}
+      {/* Filter by continent */}
       <div className={styles.filterGroup}>
         <label htmlFor="Filter-by-continent">Filter by Continent:</label>
         <select onChange={handleContinentChange} id="Filter-by-continent">
@@ -56,7 +53,7 @@ const Filter = ({ setCurrentPage }) => {
         </select>
       </div>
 
-      {/* Filtro por actividad */}
+      {/* Filter by activity */}
       <div className={styles.filterGroup}>
         <label htmlFor="Filter-by-Activity">Filter by Activity:</label>
         <select onChange={handleActivityChange} id="Filter-by-Activity">
@@ -69,7 +66,7 @@ const Filter = ({ setCurrentPage }) => {
         </select>
       </div>
 
-      {/* Orden alfabético */}
+      {/* Sort A - Z */}
       <div className={styles.filterGroup}>
         <label htmlFor="Alphabetic-order">Alphabetic Order:</label>
         <select onChange={handleAlphabeticOrderChange} id="Alphabetic-order">
@@ -78,7 +75,7 @@ const Filter = ({ setCurrentPage }) => {
         </select>
       </div>
 
-      {/* Orden por población */}
+      {/* Sort population */}
       <div className={styles.filterGroup}>
         <label htmlFor="Population-order">Population Order:</label>
         <select onChange={handlePopulationOrderChange} id="Population-order">

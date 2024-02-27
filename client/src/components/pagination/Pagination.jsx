@@ -6,39 +6,35 @@ const Pagination = ({
   currentPage,
   onPageChange,
 }) => {
-  // Calculamos el total de paginas
+  // Calculating total pages
   const totalPages = Math.ceil(countries / countriesPerPage);
 
-  // Creamos un array para renderizar los botones
+  // Creating an array to buttons
   const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {
     pageNumbers.push(i);
   }
 
-  // Funcion para cambiar de pagina
+// Function to change page
   const handlePageChange = (pageNumber) => {
-    // Verificar que la página no sea menor que 1
+    // Checking if the page is minus than 1
     if (pageNumber < 1) {
       pageNumber = 1;
     }
-    // Verificar que la página no sea mayor que el total de páginas
+    // Checking tha page must no higher than total pages
     if (pageNumber > totalPages) {
       pageNumber = totalPages;
     }
     onPageChange(pageNumber);
   };
 
-  // Función para calcular los números de página a mostrar
   const calculatePageNumbersToShow = () => {
     const maxPagesToShow = 4;
     const pageNumbersToShow = [];
 
-    // Calcular la página inicial a mostrar
     let startPage = Math.max(currentPage - Math.floor(maxPagesToShow / 2), 1);
-    // Calcular la página final a mostrar
     let endPage = Math.min(startPage + maxPagesToShow - 1, totalPages);
 
-    // Ajustar el rango de páginas si es necesario
     if (totalPages <= maxPagesToShow) {
       startPage = 1;
       endPage = totalPages;
@@ -50,7 +46,6 @@ const Pagination = ({
       endPage = totalPages;
     }
 
-    // Agregar los números de página a mostrar al array
     for (let i = startPage; i <= endPage; i++) {
       pageNumbersToShow.push(i);
     }
@@ -60,7 +55,6 @@ const Pagination = ({
 
   return (
     <div className={styles.pagination}>
-      {/* Renderizar lista desordenada con números de página */}
       <ul className={styles.paginationList}>
         <li>
           <button

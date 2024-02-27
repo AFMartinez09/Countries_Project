@@ -26,6 +26,7 @@
   transform: scale(1.05);
 }
 
+/* If the user click in a card, will move it */
 .container:active {
   transform: scale(0.95) rotateZ(1.7deg);
 }

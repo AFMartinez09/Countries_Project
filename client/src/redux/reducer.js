@@ -55,10 +55,10 @@ const rootReducer = (state = initialState, action) => {
 
         case FILTER_BY_CONTINENT:
             const { continent } = payload;
-            // Obtener la lista completa de países desde el estado
+            // Gettin the list countries are complete (state)
             const allCountries = state.allCountries;
             if (continent === "All Continents") {
-                // Si se selecciona "Todos los Continentes", mostrar todos los países sin filtrar
+                // show all countries 
                 return { ...state, countries: allCountries };
             } else {
                 const filteredContinent = allCountries.filter((country) => country.continent === continent);
@@ -87,21 +87,18 @@ const rootReducer = (state = initialState, action) => {
             // Verificamos si el usuario seleccionó ordenar de A a Z (ascendente) o de Z a A (descendente)
             const order = payload === "from A to Z" ? 1 : -1;
 
-            // Realizamos una copia del array original de países
-            // Esto garantiza que no modificamos el estado original directamente y trabajamos sobre una copia
+            // Creating array copy (original countries) 
             const alphaOrder = [...state.countries].sort((a, b) => {
                 const nameA = a.name.toUpperCase();
                 const nameB = b.name.toUpperCase();
 
                 if (nameA < nameB) {
                     return -1 * order;
-                    // Si a viene antes que b, devolvemos -1 para que a se ubique antes que b (orden ascendente) o después que b (orden descendente)
                 }
                 if (nameA > nameB) {
                     return 1 * order;
-                    // Si a viene después que b, devolvemos 1 para que a se ubique después de b (orden ascendente) o antes que b (orden descendente)
                 }
-                return 0; // Si los nombres son iguales, no se cambia el orden
+                return 0; 
             });
 
             return {
@@ -110,7 +107,7 @@ const rootReducer = (state = initialState, action) => {
             };
 
         case POPULATION_ORDER:
-            // Verifica si el orden debe ser ascendente ('asc') o descendente ('desc')
+            // Checking order asc or desc
             const populationOrder = payload === 'asc' ?
                 [...state.countries].sort((a, b) => b.population - a.population)
                 :

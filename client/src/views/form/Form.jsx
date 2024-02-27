@@ -35,7 +35,7 @@ const Form = () => {
   const handleCountrySelect = (event) => {
     const countrySelect = event.target.value;
 
-    // Agregar el país seleccionado a la lista de países seleccionados
+    // Adding countries were selecting (selectedCountries)
     setSelectedCountries([...selectedCountries, countrySelect]);
 
     setnewActivity({
@@ -72,8 +72,7 @@ const Form = () => {
     e.preventDefault();
     dispatch(postActivity(newActivity));
 
-
-        // Si la operacion es exitosa manda los datos y limpia el form
+    // Cleaning form it was successfully
         setnewActivity({
           name: "",
           difficulty: "",
@@ -81,7 +80,7 @@ const Form = () => {
           season: "",
           countries: [],
         });
-        // Limpiar los países seleccionados
+        // Cleaning countries were selecting
         setSelectedCountries([]);
   };
 
@@ -105,7 +104,7 @@ const Form = () => {
           value={newActivity.difficulty}
           onChange={handleInputChange}
         >
-          <option value="">Select difficulty...</option>
+          <option value="">Select difficulty</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -122,19 +121,19 @@ const Form = () => {
           value={newActivity.duration}
           onChange={handleInputChange}
         >
-          <option value="">Select duration...</option>
+          <option value="">Select duration</option>
           <option value="1">1 hour</option>
-          <option value="2">2 hour</option>
-          <option value="3">3 hour</option>
-          <option value="4">4 hour</option>
-          <option value="5">5 hour</option>
-          <option value="6">6 hour</option>
-          <option value="7">7 hour</option>
-          <option value="8">8 hour</option>
-          <option value="9">9 hour</option>
-          <option value="10">10 hour</option>
-          <option value="11">11 hour</option>
-          <option value="12">12 hour</option>
+          <option value="2">2 hours</option>
+          <option value="3">3 hours</option>
+          <option value="4">4 hours</option>
+          <option value="5">5 hours</option>
+          <option value="6">6 hours</option>
+          <option value="7">7 hours</option>
+          <option value="8">8 hours</option>
+          <option value="9">9 hours</option>
+          <option value="10">10 hours</option>
+          <option value="11">11 hours</option>
+          <option value="12">12 hours</option>
         </select>
         {error.duration && (
           <p className={styles.error_message}>{error.duration}</p>
@@ -146,7 +145,7 @@ const Form = () => {
           value={newActivity.season}
           onChange={handleInputChange}
         >
-          <option value="">Select season...</option>
+          <option value="">Select season</option>
           <option value="Summer">Summer</option>
           <option value="Autumn">Autumn</option>
           <option value="Winter">Winter</option>
@@ -171,7 +170,7 @@ const Form = () => {
           <p className={styles.error_message}>{error.countries}</p>
         )}
 
-        {/* Lista de países seleccionados */}
+        {/* List of selectedCountries */}
         <div className={styles.selectedCountries}>
           {selectedCountries.map((countryId) => {
             const country = allCountries.find((c) => c.id === countryId);

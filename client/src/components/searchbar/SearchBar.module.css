@@ -3,6 +3,14 @@
   justify-content: center;
 }
 
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  width: 18rem;
+  background: #e8e8e8;
+}
+
 .input {
   border: none;
   padding: 10px 10px 10px 20px;
@@ -11,14 +19,6 @@
   border-radius: 1rem;
   background: transparent;
   transition: 0.3s;
-}
-
-.inputContainer {
-  display: flex;
-  align-items: center;
-  border-radius: 1rem;
-  width: 18rem;
-  background: #e8e8e8;
 }
 
 .button {

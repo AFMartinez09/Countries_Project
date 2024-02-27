@@ -12,8 +12,7 @@ import {
     RESET_FILTERS
 } from './types.js';
 
-const URL_COUNTRIES = 'https://countries-app-wz2v.onrender.com/countries';
-const URL_ACTIVITIES = 'https://countries-app-wz2v.onrender.com/activities';
+
 const URL_COUNTRY = "http://localhost:3001/countries";
 const URL_ACTIVITY = "http://localhost:3001/activities"
 

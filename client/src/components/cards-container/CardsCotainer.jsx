@@ -10,7 +10,7 @@ const CardsContainer = ({
 }) => {
   const countriesPerPage = 10;
 
-  // Calcular los índices de inicio y fin para los países de la página actual
+  // Calculating first index and last index considering the next page
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
 
@@ -19,7 +19,7 @@ const CardsContainer = ({
     indexOfLastCountry
   );
 
-  // Función para cambiar de página
+  // Function to change page
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

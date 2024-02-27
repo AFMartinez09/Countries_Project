@@ -16,7 +16,7 @@ const createActivityHandler = async (req, res) => {
         res.status(500).json({error: error.message});
     }
 };
-
+//get all the activies 
 const getActivitiesHandler = async (req, res) => {
     try {
         const response = await getActivitiesDb();

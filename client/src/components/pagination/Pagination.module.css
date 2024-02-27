@@ -39,7 +39,7 @@
   background-color: #4c5055;
 }
 
-/* Estilo para el botón activo sin el efecto de hover */
+/* Styles button within hover effect */
 .paginationList button.active:not(:active) {
   background-color: #6d7271;
   color: #f6f5f5;

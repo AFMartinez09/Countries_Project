@@ -3,7 +3,8 @@ const { Country, Activity } = require('../db');
 const { Op } = require('sequelize');
 const axios = require('axios');
 
-// funcion para limpiar los datos de la API
+// Get API data and then save data to database, in this way
+// Is more efficient becasuse we don't need to call it again 
 const cleanApiCountry = (api) =>
     api.map(country => {
         return {
@@ -36,6 +37,7 @@ const getAllCountries = async () => {
             console.log(error);
         }
         try {
+            // Uploading data api to database
             await Country.bulkCreate(countries); // Comando para verificar la tabla de paises en BDD => SET client_encoding = 'UTF8';
         } catch (error) {
             console.log(error);
