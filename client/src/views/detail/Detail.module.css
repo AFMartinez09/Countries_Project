@@ -1,0 +1,212 @@
+.container {
+  margin: auto;
+  padding: 50px;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.container span {
+  font-style: oblique;
+  padding-left: 5px;
+  text-shadow: none;
+  color: #e4dddd;
+}
+
+.container h1 {
+  margin-bottom: 10px;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #dadbdb;
+}
+
+.container_country {
+  font-size: 18px;
+  height: auto;
+  width: 35rem;
+  padding: 1rem;
+  background: #4e4e4e;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  border-radius: 32px;
+}
+
+.container_country img {
+  width: 367px;
+  height: 215px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.container_country h2 {
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  text-shadow: -2px -2px 2px rgb(0, 0, 0);
+}
+
+.container_country h3 {
+  color: #ffffff;
+  text-shadow: -2px -2px 2px rgb(0, 0, 0);
+}
+
+.card_activity {
+  padding: 1rem;
+  height: auto;
+  background: #4e4e4e;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -1px 1px 23px 5px rgba(0, 0, 0, 0.42);
+  border-radius: 32px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.buttonContainer h2 {
+  color: #f0eded;
+  margin-bottom: 40px;
+}
+
+.create {
+  position: relative;
+  width: 180px;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #34974d;
+  background-color: #3aa856;
+}
+
+.create,
+.button__icon,
+.button__text {
+  transition: all 0.3s;
+}
+
+.create .button__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+  margin-left: -18px;
+}
+
+.create .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 58px;
+  border-radius: 20px;
+  background-color: #34974d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create .svg {
+  width: 30px;
+  stroke: #fff;
+}
+
+.create:hover {
+  background: #34974d;
+}
+
+.create:hover .button__text {
+  color: transparent;
+}
+
+.create:hover .button__icon {
+  width: 158px;
+  transform: translateX(0);
+}
+
+.create:active .button__icon {
+  background-color: #2e8644;
+}
+
+.create:active {
+  border: 1px solid #2e8644;
+}
+
+.section_activity {
+  display: flex;
+  justify-content: space-evenly;
+  border: 0px solid rgb(0, 0, 0);
+}
+
+.section_activity span {
+  color: #cfd1d5;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.section_activity h4 {
+  color: #ffffff;
+  text-shadow: -2px -2px 2px rgb(0, 0, 0);
+}
+
+@media (max-width: 970px) {
+  .container_country {
+    width: 30rem;
+    font-size: 15px;
+  }
+  .container_country h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 796px) {
+  .container_country,
+  .card_activity {
+    font-size: 15px;
+    height: auto;
+  }
+  .container_country h2 {
+    font-size: 20px;
+  }
+  .container {
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .container_country,
+  .card_activity {
+    font-size: 15px;
+    width: auto;
+  }
+  .container_country h2 {
+    font-size: 20px;
+  }
+  .container_country img {
+    width: 200px;
+    height: 150px;
+  }
+  .container {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}

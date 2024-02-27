@@ -1,0 +1,56 @@
+.paginationList {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.paginationList li {
+  margin: 0 5px;
+}
+
+.paginationList button {
+  padding: 5px 10px;
+  
+  border: 1px solid #ccc;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.num_pagination {
+  background-color: white;
+}
+
+.num_pagination:hover {
+  background-color: #d2d2d2;
+}
+
+.paginationList button:focus {
+  outline: none;
+}
+
+.first_last {
+  background-color: #4c5055;
+  color: white;
+}
+
+.first_last:hover {
+  background-color: #4c5055;
+}
+
+/* Estilo para el botón activo sin el efecto de hover */
+.paginationList button.active:not(:active) {
+  background-color: #6d7271;
+  color: #f6f5f5;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

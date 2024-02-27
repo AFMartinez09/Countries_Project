@@ -1,0 +1,132 @@
+.landing {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  background-image: url('../../assets/landing.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  animation: fadeIn 2s ease;
+  flex-wrap: wrap;
+}
+
+ 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+  };
+  10% {
+    opacity: 1;
+    filter: brightness(3) blur(10px) ;
+  }
+} 
+
+.backgroundImage {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing h1 {
+  backdrop-filter: blur(2px);
+  margin: 5px;
+  font-size: 5.3em;
+  line-height: 1.1;
+}
+
+.landing h2 {
+  margin-bottom: 3rem;
+  color: 	rgb(92, 92, 100);
+
+}
+
+.landing button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.7rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: rgb(92, 92, 100);
+  color: black;
+  -webkit-box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+  box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+}
+
+.landing button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.landing button:hover span {
+  color: rgb(223, 222, 222);;
+}
+
+.landing button::before,
+.landing button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.landing button::before {
+  content: "";
+  background: #ffffff;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.8s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.landing button:hover::before {
+  transform: translateY(100px)
+}
+
+@media (max-width: 860px) {
+  .landing h1 {
+    font-size: 6em;
+  }
+
+  .landing h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing h1 {
+    font-size: 2em;
+  }
+
+  .landing h2 {
+    font-size: 0.8em;
+  }
+
+  .landing button {
+    padding: 0.7rem 2rem;
+    font-size: small;
+  }
+}

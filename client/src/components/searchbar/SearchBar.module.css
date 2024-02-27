@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  border: none;
+  padding: 10px 10px 10px 20px;
+  width: 14rem;
+  color: black;
+  border-radius: 1rem;
+  background: transparent;
+  transition: 0.3s;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  width: 18rem;
+  background: #e8e8e8;
+}
+
+.button {
+  background-color: transparent;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  animation: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 750px) {
+ .inputContainer {
+  width: 10rem;
+ }
+
+ .input {
+  width: 6rem;
+  font-size: small;
+ }
+}

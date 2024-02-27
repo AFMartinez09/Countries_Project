@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 60px 0px 65px 0;
+  color: #183153;
+  font-weight: 700;
+}
+
+.container select {
+  position: relative;
+  padding: 5px 12px 6px 14px;
+  border-radius: 50px;
+  font-size: 15px;
+  width: 171px;
+  transition: box-shadow 0.3s ease;
+}
+
+.container select:hover {
+  box-shadow: 0px 4px 15px 1px #4e4e4e;;
+}
+
+.container select,
+option {
+  cursor: pointer;
+}
+
+.container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.resetButton {
+  align-self: center;
+}
+
+.resetButton button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.7rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #4e4e4e;;
+  color: black;
+  -webkit-box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+  box-shadow: 2px -8px 50px -14px rgba(0, 0, 0, 0.64);
+}
+
+.resetButton button span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.resetButton button:hover span {
+  color: rgb(230, 227, 227);
+}
+
+.resetButton button::before,
+.resetButton button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.resetButton button::before {
+  content: "";
+  background: #ffffff;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.resetButton button:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

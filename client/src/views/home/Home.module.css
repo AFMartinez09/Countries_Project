@@ -1,0 +1,21 @@
+.backgroundImage {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.scrollLink {
+  position: fixed;
+  width: 60px;
+  bottom: 5px;
+  right: 10px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #212121;
+  background: #e8e8e8;
+  scroll-behavior: smooth;
+}
+
+.scrollLink:hover {
+  color: #e8e8e8;
+}
